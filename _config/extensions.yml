@@ -1,0 +1,6 @@
+---
+Name: contextawareupload
+---
+SilverStripe\CMS\Controllers\CMSPageEditController:
+  extensions:
+    - Symbiote\ContextAwareUpload\CMSPageEditControllerExtension
