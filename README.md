@@ -6,8 +6,6 @@
 [![Total Downloads](https://poser.pugx.org/silbinarywolf/silverstripe-contextawareupload/downloads.svg)](https://packagist.org/packages/silbinarywolf/silverstripe-contextawareupload)
 [![License](https://poser.pugx.org/silbinarywolf/silverstripe-contextawareupload/license.svg)](https://github.com/silbinarywolf/silverstripe-contextawareupload/blob/master/LICENSE.md)
 
-**This is not stable. This will most likely have its Git history re-written and be tagged 1.0.0 by the 26th August 2018**
-
 This module will make the default upload folder match the URL structure of the page you're uploading in, rather than just uploading
 to the `Uploads` folder or the `default-site` folder if you're using Multisites.
 
