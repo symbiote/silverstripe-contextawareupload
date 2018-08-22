@@ -15,24 +15,21 @@ class ContextAwareUploadService
     /**
      * @var SiteTree
      */
-    //private $currentPage;
-
-    public function setDefaultUploadFolderFromPage(SiteTree $record)
-    {
-        $newUploadsFolder = $this->determineFolderPathFromPage($record);
-        if ($newUploadsFolder) {
-            //$this->currentPage = $record;
-            Upload::config()->uploads_folder = $newUploadsFolder;
-        }
-    }
+    private $record;
 
     /**
-     * @return SiteTree|null
+     * @return void
      */
-    //public function getCurrentPage()
-    //{
-    //    return $this->currentPage;
-    //}
+    public function setDefaultUploadFolderFromPage(SiteTree $record)
+    {
+        if ($this->record !== $record) {
+            $newUploadsFolder = $this->determineFolderPathFromPage($record);
+            if ($newUploadsFolder) {
+                Upload::config()->uploads_folder = $newUploadsFolder;
+                $this->record = $record;
+            }
+        }
+    }
 
     /**
      * @return string Return blank string if an error occurred

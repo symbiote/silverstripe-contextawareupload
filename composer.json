@@ -1,10 +1,13 @@
 {
-    "name": "symbiote/silverstripe-YOUR_MODULE_NAME",
-    "description": "YOUR DESCRIPTION HERE",
+    "name": "silbinarywolf/silverstripe-contextawareupload",
+    "description": "Automatic organization of uploaded files based on the site tree structure.",
     "type": "silverstripe-vendormodule",
     "keywords": [
         "silverstripe",
         "symbiote",
+        "context",
+        "aware",
+        "upload"
     ],
     "license": "BSD-3-Clause",
     "authors": [
@@ -18,20 +21,20 @@
         }
     ],
     "require": {
-        "silverstripe/framework": "^4.0"
+        "silverstripe/framework": "^4.1"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "^3.0",
         "phpunit/phpunit": "^5.7"
     },
+    "scripts": {
+        "phpcbf": "phpcbf src/ tests/",
+        "phpcs": "phpcs src/ tests/"
+    },
     "autoload": {
         "psr-4": {
-            "Symbiote\\YOUR_MODULE_NAME\\": "src/",
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Symbiote\\YOUR_MODULE_NAME\\Tests\\": "tests/"
+            "Symbiote\\ContextAwareUpload\\": "src/",
+            "Symbiote\\ContextAwareUpload\\Tests\\": "tests/"
         }
     },
     "extra": {

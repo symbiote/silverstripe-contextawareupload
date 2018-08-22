@@ -16,10 +16,7 @@ class PageWithUploadField extends SiteTree implements TestOnly
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();
-        $fields->addFieldToTab('Root.Images', (new UploadField('MyUploadFieldTest', 'MyUploadFieldTest'))
-            ->setAllowedMaxFileNumber(1)
-            ->setDescription('The image displayed when a user shares the page on social media.')
-        );
+        $fields->addFieldToTab('Root.Images', new UploadField('MyUploadFieldTest', 'MyUploadFieldTest'));
         return $fields;
     }
 }

@@ -6,6 +6,8 @@
 [![Total Downloads](https://poser.pugx.org/silbinarywolf/silverstripe-contextawareupload/downloads.svg)](https://packagist.org/packages/silbinarywolf/silverstripe-contextawareupload)
 [![License](https://poser.pugx.org/silbinarywolf/silverstripe-contextawareupload/license.svg)](https://github.com/silbinarywolf/silverstripe-contextawareupload/blob/master/LICENSE.md)
 
+**This is not stable. This will most likely have its Git history re-written and be tagged 1.0.0 by the 26th August 2018**
+
 This module will make the default upload folder match the URL structure of the page you're uploading in, rather than just uploading
 to the `Uploads` folder or the `default-site` folder if you're using Multisites.
 
@@ -19,7 +21,7 @@ composer require silbinarywolf/silverstripe-contextawareupload:~1.0
 
 ## Requirements
 
-* SilverStripe 4.0+
+* SilverStripe 4.1+
 * (Optional) Multisites
 
 ## Documentation
@@ -28,6 +30,18 @@ composer require silbinarywolf/silverstripe-contextawareupload:~1.0
 * [License](LICENSE.md)
 * [Contributing](CONTRIBUTING.md)
 
-## Credits (OPTIONAL)
+## Known limitations
+
+Uploading files via a WYSIWYG field's "Insert Media" button or anything else using the AssetAdmin view will not be affected by this module. I'm hoping this issue will be fixed in the future, and it's been logged here: https://github.com/silverstripe/silverstripe-assets/issues/159
+
+In the meantime however, you can optionally apply an extension so that any files uploaded to the root folder of assets, gets moved into the desired folder.
+ie. if File::ParentID == 0, move to default folder.
+```yml
+SilverStripe\Assets\File:
+  extensions:
+    - Symbiote\ContextAwareUpload\ForceRootToDefaultExtension
+```
+
+## Credits
 
 * [Jake Bentvelzen](https://github.com/SilbinaryWolf) for the initial build.
