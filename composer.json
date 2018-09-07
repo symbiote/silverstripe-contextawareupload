@@ -1,5 +1,5 @@
 {
-    "name": "silbinarywolf/silverstripe-contextawareupload",
+    "name": "symbiote/silverstripe-contextawareupload",
     "description": "Automatic organization of uploaded files based on the site tree structure.",
     "type": "silverstripe-vendormodule",
     "keywords": [
@@ -39,9 +39,12 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "1.0.x-dev"
+            "dev-master": "2.0.x-dev"
         }
     },
+	"replace": {
+		"silbinarywolf/silverstripe-contextawareupload": "self.version"
+	},
     "prefer-stable": true,
     "minimum-stability": "dev"
 }
