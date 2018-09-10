@@ -14,7 +14,7 @@ ie. If you upload a file to a page that can be visited at http://www.mysite.com/
 ## Composer Install
 
 ```
-composer require symbiote/silverstripe-contextawareupload:~1.0
+composer require symbiote/silverstripe-contextawareupload:~2.0
 ```
 
 ## Requirements
